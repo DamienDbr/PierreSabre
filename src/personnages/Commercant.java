@@ -7,11 +7,13 @@ public class Commercant extends Humain {
 	}
 
 	public int seFaireExtorquer() {
-		int don = argent;
+		int vol = argent;
 		argent = 0 ;
-		return don;
+		parler(" J’ai tout perdu! Le monde est trop injuste...");
+		return vol;
 	}
-	/*void recevoir(int argent) {
-		arg
-	}*/
+	public void recevoir(int don) {
+		gagnerArgent(don);
+		parler(don+" sous ! Je te remercie généreux donateur!");
+	}
 }
